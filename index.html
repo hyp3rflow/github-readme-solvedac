@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      margin: 5px;
+      background-color: black;
+    }
+  </style>
+  <body>
+    <svg
+      width="600"
+      height="150"
+      viewBox="0 0 600 150"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+        * {
+          font-family: 'Inter', 'Noto Sans KR', sans-serif;
+        }
+
+        text {
+          fill: black;
+        }
+
+        .profile-image {
+          filter: drop-shadow(rgba(0, 212, 151, 0.6) 0px 4px 8px);
+          border-radius: 50%;
+
+          position: absolute;
+          left: 20px;
+          top: 20px;
+        }
+
+        .header {
+          font-weight: 700;
+          font-size: 18px;
+        }
+
+        .bio {
+          font-size: 11px;
+        }
+
+        .rank {
+          color: rgb(39, 226, 164);
+          font-weight: 700;
+          font-size: 14px;
+        }
+
+        .exp-progress {
+          color: rgb(138, 143, 149);
+          font-weight: 400;
+          font-size: 10px;
+        }
+
+        .flex-row {
+          display: flex;
+          flex-direction: row;
+          width: 235px;
+          height: 50px;
+
+          justify-content: flex-end;
+        }
+
+        .item-box {
+          margin-left: 12px;
+          padding-right: 5px;
+          border-right: 1px solid black;
+        }
+
+        .item-title {
+          font-weight: 400;
+          font-size: 11px;
+        }
+
+        .item-number {
+          font-weight: 600;
+          font-size: 14px;
+          text-align: right;
+        }
+      </style>
+      <rect
+        data-testid="card-bg"
+        x="0.5"
+        y="0.5"
+        rx="4.5"
+        height="99%"
+        stroke="#E4E2E2"
+        width="599"
+        fill="#FFFEFE"
+      />
+      <g class="profile" data-testid="card-title" transform="translate(15, 15)">
+        <foreignObject width="100" height="100" x="-20" y="-20">
+          <img class="profile-image" width=65" height="65"
+          src="https://static.solved.ac/uploads/profile/360x360/d4eb0cb2b942cda796016c6d3acbf94c304b94fd.png"
+          />
+        </foreignObject>
+        <foreignObject width="35" height="35" x="35" y="45">
+          <img
+            width="32"
+            height="32"
+            src="https://static.solved.ac/tier_small/17.svg"
+          />
+        </foreignObject>
+        <text x="80" y="18.5" class="header">hyperflow</text>
+        <text x="80" y="35.5" class="bio">
+          solved.ac 레이팅과 PS 실력은 상관관계가 없습니다.
+        </text>
+      </g>
+
+      <g transform="translate(95, 60)">
+        <foreignObject width="300" height="300">
+          <div class="rank">Platinum IV</div>
+          <div class="exp-progress">3,891,191,500 / 3,891,191,500</div>
+        </foreignObject>
+
+        <foreignObject width="300" height="300" x="155" y="-2">
+          <div class="flex-row box">
+            <div class="item-box box">
+              <div class="item-title">전체 랭킹</div>
+              <div class="item-number">1</div>
+            </div>
+            <div class="item-box box">
+              <div class="item-title">문제 해결 수</div>
+              <div class="item-number">8,705</div>
+            </div>
+          </div>
+        </foreignObject>
+      </g>
+
+      <g class="badge" data-testid="card-badge" transform="translate(405, 10)">
+        <foreignObject width="30" height="30" y="5">
+          <img
+            width="30"
+            height="30"
+            src="https://static.solved.ac/profile_badge/ucpc2020.png"
+          />
+        </foreignObject>
+        <foreignObject width="40" height="40" x="40">
+          <img
+            width="40"
+            height="40"
+            src="https://static.solved.ac/class/c3.svg"
+          />
+        </foreignObject>
+      </g>
+    </svg>
+  </body>
+</html>
