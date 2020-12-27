@@ -8,5 +8,5 @@
 
 다음과 같이 작성하면 되며, 주소의 handle 쿼리에 자신의 백준 핸들을 입력해주세요.
 ```markdown
-![hyp3rflow's solved.ac stats]([https://](https://github-readme-solvedac.hyp3rflow.vercel.app/api/?handle=hyperflow)
+![hyp3rflow's solved.ac stats](https://github-readme-solvedac.hyp3rflow.vercel.app/api/?handle=hyperflow)
 ```
