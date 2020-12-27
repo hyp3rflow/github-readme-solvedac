@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "axios": "^0.21.1",
-    "cheerio": "^1.0.0-rc.5"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@vercel/node": "^1.8.5"
   },
