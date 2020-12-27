@@ -1,0 +1,139 @@
+<svg
+      width="700"
+      height="150"
+      viewBox="0 0 700 150"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    >
+      <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&amp;display=swap');
+
+        * {
+          font-family: 'Inter', 'Noto Sans KR', sans-serif;
+        }
+
+        text {
+          fill: black;
+        }
+
+        .profile-image {
+          filter: drop-shadow(rgba(0, 212, 151, 0.6) 0px 4px 8px);
+        }
+
+        .header {
+          font-weight: 700;
+          font-size: 20px;
+        }
+
+        .bio {
+          font-size: 16px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: inline-block;
+          width: 400px;
+          height: 30px;
+          white-space: nowrap;
+        }
+
+        .rank {
+          color: rgb(39, 226, 164);
+          font-weight: 700;
+          font-size: 24px;
+        }
+
+        .exp-progress {
+          color: rgb(138, 143, 149);
+          font-weight: 400;
+          font-size: 14px;
+        }
+
+        .flex-row {
+          display: flex;
+          flex-direction: row;
+          width: 235px;
+          height: 50px;
+
+          justify-content: flex-end;
+        }
+
+        .item-box {
+          margin-left: 12px;
+          padding-right: 10px;
+          border-right: 1px solid black;
+        }
+
+        .item-title {
+          font-weight: 400;
+          font-size: 16px;
+        }
+
+        .item-number {
+          font-weight: 600;
+          font-size: 22px;
+          text-align: right;
+        }
+      </style>
+      <rect
+        data-testid="card-bg"
+        x="0.5"
+        y="0.5"
+        rx="4.5"
+        height="99%"
+        stroke="#E4E2E2"
+        width="699"
+        fill="#FFFEFE"
+      />
+      <g class="profile" data-testid="card-title" transform="translate(20, 20)">
+        <foreignObject class="profile-image" width="300" height="300" x="-5" y="5">
+          <xhtml:img
+            width="100"
+            height="100"
+            src="https://static.solved.ac/tier_small/17.svg"
+          />
+        </foreignObject>
+        <text x="105" y="20.5" class="header">hyperflow</text>
+        <g transform="translate(105, 28)">
+          <foreignObject width="400" height="100">
+            <xhtml:span class="bio">
+              가나다라마가나다라마가나다라마가나다라마가나다라마가나다라마
+            </xhtml:span>
+          </foreignObject>
+        </g>
+      </g>
+
+      <g transform="translate(125, 80)">
+        <foreignObject width="300" height="300">
+          <xhtml:div class="rank">Platinum IV</xhtml:div>
+          <xhtml:div class="exp-progress">3,891,191,500 / 3,891,191,500</xhtml:div>
+        </foreignObject>
+
+        <foreignObject width="300" height="300" x="305" y="3">
+          <xhtml:div class="flex-row box">
+            <xhtml:div class="item-box box">
+              <xhtml:div class="item-title">전체 랭킹</xhtml:div>
+              <xhtml:div class="item-number">1</xhtml:div>
+            </xhtml:div>
+            <xhtml:div class="item-box box">
+              <xhtml:div class="item-title">문제 해결 수</xhtml:div>
+              <xhtml:div class="item-number">8,705</xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+      </g>
+
+      <g class="badge" data-testid="card-badge" transform="translate(585, 10)">
+        <foreignObject width="45" height="45" y="5">
+          <xhtml:img
+            width="45"
+            height="45"
+            src="https://static.solved.ac/profile_badge/ucpc2020.png"
+          />
+        </foreignObject>
+        <foreignObject width="55" height="55" x="50">
+          <svg xmlns="http://www.w3.org/2000/svg" id="레이어_1" data-name="레이어 1" viewBox="0 0 500 512"><defs><style>.cls-1{fill:#2d2d2d;}.cls-2{fill:#fff;}</style></defs><title>0</title><polygon class="cls-1" points="0 0 0 419.74 199.77 512 400 419.74 400 0 0 0"/><path class="cls-2" d="M291.8,133.59a68.54,68.54,0,0,1-2.89,20.88A62.48,62.48,0,0,1,280.75,171a81.44,81.44,0,0,1-12.67,14.22q-7.43,6.67-16.84,13.86c-3.86,3.12-7.07,5.89-9.6,8.28a33.26,33.26,0,0,0-6,7.38,27.63,27.63,0,0,0-3.07,7.92,46.64,46.64,0,0,0-.91,9.9V242H175.52V228.27a70.93,70.93,0,0,1,1.8-16.74,49.92,49.92,0,0,1,5.4-13.5,72.82,72.82,0,0,1,8.82-11.88A135.7,135.7,0,0,1,204,174.27l11.88-11.16a70.45,70.45,0,0,0,10.44-11.34,23.5,23.5,0,0,0,4.32-14.22q0-11.51-7-18.36t-19.26-6.84q-15.12,0-22.68,10.26a42.26,42.26,0,0,0-8.28,23.22l-57.24-6.12q2.16-19.44,9.9-34.2A75.63,75.63,0,0,1,146,81a85.14,85.14,0,0,1,27.74-14.58,109.22,109.22,0,0,1,32.84-4.86,121.18,121.18,0,0,1,31.6,4.14,80.58,80.58,0,0,1,27.26,13,65.91,65.91,0,0,1,19.14,22.5Q291.79,114.89,291.8,133.59ZM238.88,292.71A32.71,32.71,0,0,1,228.8,317q-10.08,9.9-24.84,9.9a36,36,0,0,1-13.5-2.52,34,34,0,0,1-11.16-7.2,36.11,36.11,0,0,1-7.74-10.8,30.82,30.82,0,0,1-2.88-13.32,33.09,33.09,0,0,1,2.7-13.14,33.48,33.48,0,0,1,7.56-11,36.48,36.48,0,0,1,11.34-7.38,35.21,35.21,0,0,1,13.68-2.7,33.91,33.91,0,0,1,13.5,2.7,39,39,0,0,1,11.16,7.2,31.55,31.55,0,0,1,7.56,10.8A33.09,33.09,0,0,1,238.88,292.71Z" transform="translate(0)"/><polygon class="cls-2" points="0 339.02 0 378.94 199.77 471.2 400 378.94 400 339.02 199.77 431.28 0 339.02"/></svg>
+        </foreignObject>
+      </g>
+    </svg>
