@@ -13,3 +13,6 @@
 
 ## 예시
 ![hyp3rflow's solved.ac stats](https://github-readme-solvedac.hyp3rflow.vercel.app/api/?handle=hyperflow)
+
+## Lisence
+Rank, Class 등 Image Asset에 대한 저작권은 [solved.ac](https://solved.ac)에 있습니다.
