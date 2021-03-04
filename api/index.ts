@@ -10,7 +10,7 @@ export default async (request: NowRequest, response: NowResponse) => {
 
   if (data.success === true) {
     response.setHeader('Content-Type', 'image/svg+xml');
-    response.setHeader('Cache-Control', `public, max-age=10`);
+    response.setHeader('Cache-Control', `max-age=0, s-maxage=10`);
 
     const user = data.result.user[0];
     const card = new Card({ width: 700, height: 150, user });
