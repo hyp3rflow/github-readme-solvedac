@@ -24,9 +24,10 @@ class Card {
       rank,
       solved,
       class: classNumber,
+      badge: { url: badge_url },
+      profile_image_url,
       exp,
-      previous_exp_cap,
-      next_exp_cap,
+      rating,
     } = this.user;
 
     const level_string =
@@ -35,9 +36,6 @@ class Card {
             roman[4 - ((level - 1) % 5)]
           }`
         : 'Unrated';
-    const current_exp = exp - previous_exp_cap;
-    const current_cap = next_exp_cap - previous_exp_cap;
-    const progress = current_exp / current_cap;
 
     return `<svg
         width="${this.width}"
@@ -80,16 +78,16 @@ class Card {
         }
 
 
-        .rank {
+        .rating {
           color: rgb(39, 226, 164);
           font-weight: 700;
           font-size: 24px;
         }
 
-        .exp-progress {
+        .rank {
           color: rgb(138, 143, 149);
-          font-weight: 400;
-          font-size: 14px;
+          font-weight: 700;
+          font-size: 16px;
         }
 
         .flex-row {
@@ -190,12 +188,16 @@ class Card {
 
       <g transform="translate(125, 80)">
         <foreignObject width="300" height="300">
+          <xhtml:div class="rating ${
+            level > 0
+              ? prefix[Math.floor((level - 1) / 5)].toLowerCase()
+              : 'unrated'
+          }">${rating}</xhtml:div>
           <xhtml:div class="rank ${
             level > 0
               ? prefix[Math.floor((level - 1) / 5)].toLowerCase()
               : 'unrated'
           }">${level_string}</xhtml:div>
-          <xhtml:div class="exp-progress">${current_exp.toLocaleString()} / ${current_cap.toLocaleString()}</xhtml:div>
         </foreignObject>
 
         <foreignObject width="300" height="300" x="305" y="3">
