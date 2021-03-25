@@ -24,7 +24,6 @@ class Card {
       rank,
       solved,
       class: classNumber,
-      badge: { url: badge_url },
       profile_image_url,
       exp,
       rating,
