@@ -173,7 +173,7 @@ class Card {
             ? prefix[Math.floor((tier - 1) / 5)].toLowerCase() + '-filter'
             : 'unrated-filter'
         }" width="300" height="300" x="8" y="5">
-          ${tierSvg[tier]}
+          ${levelSvg[tier]}
         </foreignObject>
         <text x="105" y="20.5" class="header">${handle}</text>
         <g transform="translate(105, 28)">
