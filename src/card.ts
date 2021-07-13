@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 import classSvg from '../assets/classSvg';
-import tierSvg from '../assets/levelSvg';
+import levelSvg from '../assets/levelSvg';
 
 class Card {
   width: number;
