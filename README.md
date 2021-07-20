@@ -11,8 +11,18 @@
 ![hyp3rflow's solved.ac stats](https://github-readme-solvedac.hyp3rflow.vercel.app/api/?handle=hyperflow)
 ```
 
+png 이미지 파일로 카드를 만들고 싶으신 경우, 다음과 같은 방법으로 사용할 수 있습니다.  
+`https://github-readme-solvedac.hyp3rflow.vercel.app/png?handle=YOUR_HANDLE_HERE`
+
 ## 예시
 ![hyp3rflow's solved.ac stats](https://github-readme-solvedac.hyp3rflow.vercel.app/api/?handle=hyperflow)
 
-## Lisence
+## Contribution
+```sh
+yarn
+vercel dev
+```
+커맨드를 이용해서 개발환경을 설정하신 후, PR을 생성해주세요.
+
+## License
 Rank, Class 등 Image Asset에 대한 저작권은 [solved.ac](https://solved.ac)에 있습니다.
