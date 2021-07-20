@@ -5,12 +5,12 @@ import levelSvg from '../assets/levelSvg';
 class Card {
   width: number;
   height: number;
-  user;
+  data;
 
-  constructor({ width = 700, height = 150, user }) {
+  constructor({ width = 700, height = 150, data }) {
     this.width = width;
     this.height = height;
-    this.user = user;
+    this.data = data;
   }
 
   render() {
@@ -18,21 +18,21 @@ class Card {
     const roman = ['I', 'II', 'III', 'IV', 'V'];
 
     const {
-      user_id,
+      handle,
       bio,
-      level,
+      tier,
       rank,
-      solved,
+      solvedCount,
       class: classNumber,
-      profile_image_url,
+      profileImageUrl,
       exp,
       rating,
-    } = this.user;
+    } = this.data;
 
-    const level_string =
-      level > 0
-        ? `${prefix[Math.floor((level - 1) / 5)]} ${
-            roman[4 - ((level - 1) % 5)]
+    const tier_string =
+      tier > 0
+        ? `${prefix[Math.floor((tier - 1) / 5)]} ${
+            roman[4 - ((tier - 1) % 5)]
           }`
         : 'Unrated';
 
@@ -169,13 +169,13 @@ class Card {
       />
       <g class="profile" data-testid="card-title" transform="translate(20, 20)">
         <foreignObject class="profile-image ${
-          level > 0
-            ? prefix[Math.floor((level - 1) / 5)].toLowerCase() + '-filter'
+          tier > 0
+            ? prefix[Math.floor((tier - 1) / 5)].toLowerCase() + '-filter'
             : 'unrated-filter'
         }" width="300" height="300" x="8" y="5">
-          ${levelSvg[level]}
+          ${levelSvg[tier]}
         </foreignObject>
-        <text x="105" y="20.5" class="header">${user_id}</text>
+        <text x="105" y="20.5" class="header">${handle}</text>
         <g transform="translate(105, 28)">
           <foreignObject width="400" height="100">
             <xhtml:span class="bio">
@@ -188,15 +188,15 @@ class Card {
       <g transform="translate(125, 80)">
         <foreignObject width="300" height="300">
           <xhtml:div class="rating ${
-            level > 0
-              ? prefix[Math.floor((level - 1) / 5)].toLowerCase()
+            tier > 0
+              ? prefix[Math.floor((tier - 1) / 5)].toLowerCase()
               : 'unrated'
           }">${rating}</xhtml:div>
           <xhtml:div class="rank ${
-            level > 0
-              ? prefix[Math.floor((level - 1) / 5)].toLowerCase()
+            tier > 0
+              ? prefix[Math.floor((tier - 1) / 5)].toLowerCase()
               : 'unrated'
-          }">${level_string}</xhtml:div>
+          }">${tier_string}</xhtml:div>
         </foreignObject>
 
         <foreignObject width="300" height="300" x="305" y="3">
@@ -207,7 +207,7 @@ class Card {
             </xhtml:div>
             <xhtml:div class="item-box box">
               <xhtml:div class="item-title">문제 해결 수</xhtml:div>
-              <xhtml:div class="item-number">${solved}</xhtml:div>
+              <xhtml:div class="item-number">${solvedCount}</xhtml:div>
             </xhtml:div>
           </xhtml:div>
         </foreignObject>
