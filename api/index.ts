@@ -13,6 +13,7 @@ export default async (request: NowRequest, response: NowResponse) => {
       return response.send(card.render());
     }
   } catch (error) {
+    console.error(error);
     return response.status(404).send(error);
   }
   return response.status(500).send('');
