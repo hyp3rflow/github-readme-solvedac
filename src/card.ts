@@ -25,9 +25,11 @@ class Card {
       solvedCount,
       class: classNumber,
       profileImageUrl,
+      badge,
       exp,
       rating,
     } = this.data;
+    const badgeImageUrl = badge?.badgeImageUrl;
 
     const tier_string =
       tier > 0
@@ -107,6 +109,7 @@ class Card {
         .item-title {
           font-weight: 400;
           font-size: 16px;
+          text-align: right;
         }
 
         .item-number {
@@ -217,6 +220,7 @@ class Card {
         <foreignObject width="55" height="55" x="50">
           ${classSvg[classNumber]}
         </foreignObject>
+        ${badgeImageUrl && `<image href="${badgeImageUrl}" width="45" height="45" y="5"/>`}
       </g>
       </svg>`;
   }
