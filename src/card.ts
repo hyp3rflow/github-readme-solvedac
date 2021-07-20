@@ -5,12 +5,12 @@ import levelSvg from '../assets/levelSvg';
 class Card {
   width: number;
   height: number;
-  user;
+  data;
 
-  constructor({ width = 700, height = 150, user }) {
+  constructor({ width = 700, height = 150, data }) {
     this.width = width;
     this.height = height;
-    this.user = user;
+    this.data = data;
   }
 
   render() {
@@ -27,7 +27,7 @@ class Card {
       profileImageUrl,
       exp,
       rating,
-    } = this.user;
+    } = this.data;
 
     const tier_string =
       tier > 0
