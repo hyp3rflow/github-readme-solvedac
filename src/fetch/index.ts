@@ -21,5 +21,5 @@ export const fetchImage = async (imageUrl: string) => {
       result += String.fromCharCode(byteArray[i]);
     }
   }
-  return btoa(result);
+  return Buffer.from(result, 'binary').toString('base64');
 };
