@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import fetch from 'isomorphic-fetch';
 import { UserInformation } from '../types';
 
 export const fetchUserInformation = async (
