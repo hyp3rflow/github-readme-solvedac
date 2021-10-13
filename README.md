@@ -11,9 +11,6 @@
 ![hyp3rflow's solved.ac stats](https://github-readme-solvedac.hyp3rflow.vercel.app/api/?handle=hyperflow)
 ```
 
-png 이미지 파일로 카드를 만들고 싶으신 경우, 다음과 같은 방법으로 사용할 수 있습니다.  
-`https://github-readme-solvedac.hyp3rflow.vercel.app/png?handle=YOUR_HANDLE_HERE`
-
 ## 예시
 ![hyp3rflow's solved.ac stats](https://github-readme-solvedac.hyp3rflow.vercel.app/api/?handle=hyperflow)
 
