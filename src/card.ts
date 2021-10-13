@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 import classSvg from '../assets/classSvg';
 import levelSvg from '../assets/levelSvg';
 
@@ -14,7 +13,7 @@ class Card {
   }
 
   render() {
-    const prefix = ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Ruby'];
+    const prefix = ['Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Ruby', 'Master'];
     const roman = ['I', 'II', 'III', 'IV', 'V'];
 
     const {
@@ -31,12 +30,18 @@ class Card {
     } = this.data;
     const badgeImageUrl = badge?.badgeImageUrl;
 
-    const tier_string =
-      tier > 0
-        ? `${prefix[Math.floor((tier - 1) / 5)]} ${
-            roman[4 - ((tier - 1) % 5)]
-          }`
-        : 'Unrated';
+    const tierString = (() => {
+      if(tier) {
+        const tierPrefix = prefix[Math.floor((tier - 1) / 5)];
+        const tierDivision = roman[4 - ((tier - 1) % 5)];
+
+        if(tierPrefix === 'Master') {
+          return tierPrefix;
+        }
+        return [tierPrefix, tierDivision].join(' ');
+      }
+      return 'Unrated';
+    })();
 
     return `<svg
         width="${this.width}"
@@ -53,6 +58,7 @@ class Card {
 
         * {
           font-family: 'Inter', 'Noto Sans KR', sans-serif;
+          margin: 0;
         }
 
         text {
@@ -119,22 +125,25 @@ class Card {
         }
 
         .bronze{
-          color: #ad5600;
+          fill: #ad5600;
         }
         .silver{
-          color: #435f7a;
+          fill: #435f7a;
         }
         .gold{
-          color: #ec9a00;
+          fill: #ec9a00;
         }
         .platinum{
-          color: #27e2a4;
+          fill: #27e2a4;
         }
         .diamond{
-          color: #00b4fc;
+          fill: #00b4fc;
         }
         .ruby{
-          color: #ff0062;
+          fill: #ff0062;
+        }
+        .master{  
+          fill: url(#gr-master);
         }
 
         .unrated-filter {
@@ -159,7 +168,15 @@ class Card {
         .ruby-filter{
           filter: drop-shadow(rgba(255, 48, 113, 0.6) 0px 4px 8px);
         }
+        .master-filter{
+          filter: drop-shadow(rgba(179, 0, 224, 0.6) 0px 4px 8px);
+        }
       </style>
+      <linearGradient id="gr-master" x1="0" y1="0" x2="80%" y2="100%">
+        <stop stop-color="rgb(255, 124, 168)" offset="0%"/>
+        <stop stop-color="rgb(180, 145, 255)" offset="50%"/>
+        <stop stop-color="rgb(124, 249, 255)" offset="100%"/>
+      </linearGradient>
       <rect
         data-testid="card-bg"
         x="0.5"
@@ -189,18 +206,16 @@ class Card {
       </g>
 
       <g transform="translate(125, 80)">
-        <foreignObject width="300" height="300">
-          <xhtml:div class="rating ${
+      <text dy="30" class="rating ${
+        tier > 0
+          ? prefix[Math.floor((tier - 1) / 5)].toLowerCase()
+          : 'unrated'
+      }">${rating}</text>
+          <text dy="50" class="rank ${
             tier > 0
               ? prefix[Math.floor((tier - 1) / 5)].toLowerCase()
               : 'unrated'
-          }">${rating}</xhtml:div>
-          <xhtml:div class="rank ${
-            tier > 0
-              ? prefix[Math.floor((tier - 1) / 5)].toLowerCase()
-              : 'unrated'
-          }">${tier_string}</xhtml:div>
-        </foreignObject>
+          }">${tierString}</text>
 
         <foreignObject width="300" height="300" x="305" y="3">
           <xhtml:div class="flex-row box">
