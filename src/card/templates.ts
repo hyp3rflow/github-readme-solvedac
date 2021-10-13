@@ -117,8 +117,7 @@ export const getGlobalStyle = () => `
     .master-filter {
       filter: drop-shadow(rgba(179, 0, 224, 0.6) 0px 4px 8px);
     }
-  </style>
-</defs>`;
+</style>`;
 
 export const getMasterGradient = (
   id = 'gr-master'
