@@ -6,7 +6,7 @@
   "dependencies": {
     "chrome-aws-lambda": "^5.5.0",
     "convert-svg-to-png": "^0.5.0",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^3.0.0"
   },
   "devDependencies": {
     "@types/puppeteer-core": "^5.4.0",
@@ -14,10 +14,15 @@
     "@typescript-eslint/parser": "^5.0.0",
     "@vercel/node": "^1.8.5",
     "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
     "puppeteer-core": "^5.5.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "yarn lint --fix"
   },
   "author": "",
   "license": "ISC"
