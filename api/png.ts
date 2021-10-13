@@ -1,3 +1,8 @@
+/*
+  @Deprecated
+  png export API has been deprecated.
+*/
+
 // import { NowRequest, NowResponse } from '@vercel/node';
 // import { convert } from 'convert-svg-to-png';
 // import chrome from 'chrome-aws-lambda';
