@@ -1,5 +1,6 @@
 import classSvg from '../../assets/classSvg';
 import tierSvg from '../../assets/tierSvg';
+import { fetchImage } from '../fetch';
 import { UserInformation } from '../types';
 import { getTierRank, getTierString } from './converters';
 import { getGlobalStyle, getMasterGradient } from './templates';
@@ -21,7 +22,7 @@ class CardBuilder {
     this.data = data;
   }
 
-  render() {
+  async render() {
     const {
       handle,
       bio,
@@ -38,6 +39,9 @@ class CardBuilder {
     const getTierSvg = (tier: number) => tierSvg[tier];
     const getClassSvg = (classNumber: number) => classSvg[classNumber];
     const badgeImageUrl = badge?.badgeImageUrl;
+    const fetchBadgeImage = badgeImageUrl
+      ? await fetchImage(badgeImageUrl)
+      : '';
 
     return `<svg
         width="${this.width}"
@@ -97,7 +101,7 @@ class CardBuilder {
         </foreignObject>
         ${
           badgeImageUrl &&
-          `<image href="${badgeImageUrl}" width="45" height="45" y="5"/>`
+          `<image href="data:image/jpeg;charset=utf-8;base64,${fetchBadgeImage}" width="45" height="45" y="5"/>`
         }
       </g>
     </svg>`;

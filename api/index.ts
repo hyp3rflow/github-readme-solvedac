@@ -14,7 +14,7 @@ export default async (request: NowRequest, response: NowResponse) => {
         height: 150,
         data: userInformation,
       });
-      return response.send(card.render());
+      return response.send(await card.render());
     }
   } catch (error) {
     console.error(error);
