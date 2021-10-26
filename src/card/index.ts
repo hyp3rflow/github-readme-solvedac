@@ -2,6 +2,7 @@ import classSvg from '../../assets/classSvg';
 import tierSvg from '../../assets/tierSvg';
 import { fetchImage } from '../fetch';
 import { UserInformation } from '../types';
+import { sanitizeString } from '../utils/sanitizer';
 import { getTierRank, getTierString } from './converters';
 import { getGlobalStyle, getMasterGradient } from './templates';
 
@@ -72,7 +73,7 @@ class CardBuilder {
         <g transform="translate(105, 28)">
           <foreignObject width="400" height="100">
             <xhtml:span class="bio">
-              ${bio}
+              ${sanitizeString(bio)}
             </xhtml:span>
           </foreignObject>
         </g>
