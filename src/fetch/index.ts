@@ -1,13 +1,14 @@
 import fetch from 'isomorphic-fetch';
+import { gotScraping } from 'got-scraping';
 import { UserInformation } from '../types';
 
 export const fetchUserInformation = async (
   handle: string | string[]
 ): Promise<UserInformation> => {
-  const data = await fetch(
+  const data = await gotScraping.get(
     `https://solved.ac/api/v3/user/show?handle=${handle}`
   );
-  const result = (await data.json()) as UserInformation;
+  const result = JSON.parse(data.body) as UserInformation;
   return result;
 };
 

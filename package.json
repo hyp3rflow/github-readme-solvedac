@@ -7,6 +7,7 @@
   "dependencies": {
     "chrome-aws-lambda": "^5.5.0",
     "convert-svg-to-png": "^0.5.0",
+    "got-scraping": "^4.2.1",
     "isomorphic-fetch": "^3.0.0"
   },
   "devDependencies": {
