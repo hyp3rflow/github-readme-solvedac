@@ -1,8 +1,8 @@
-import { NowRequest, NowResponse } from '@vercel/node';
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 import CardBuilder from '../src/card';
 import { fetchUserInformation } from '../src/fetch';
 
-export default async (request: NowRequest, response: NowResponse) => {
+export default async (request: VercelRequest, response: VercelResponse) => {
   const handle = request.query.handle;
   try {
     const userInformation = await fetchUserInformation(handle);
