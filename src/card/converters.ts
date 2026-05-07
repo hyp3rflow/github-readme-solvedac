@@ -1,4 +1,4 @@
-import { TierRank, TierDivision } from '../types';
+import { TierRank, TierDivision } from '../types/index.js';
 
 export const getTierString = (tier: number): string => {
   const tierRankList: TierRank[] = [

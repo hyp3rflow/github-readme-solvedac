@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import CardBuilder from '../src/card';
-import { fetchUserInformation } from '../src/fetch';
+import CardBuilder from '../src/card/index.js';
+import { fetchUserInformation } from '../src/fetch/index.js';
 
 export default async (request: VercelRequest, response: VercelResponse) => {
   const handle = request.query.handle;

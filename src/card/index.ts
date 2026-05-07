@@ -1,10 +1,10 @@
-import classSvg from '../../assets/classSvg';
-import tierSvg from '../../assets/tierSvg';
-import { fetchImage } from '../fetch';
-import { UserInformation } from '../types';
-import { sanitizeString } from '../utils/sanitizer';
-import { getTierRank, getTierString } from './converters';
-import { getGlobalStyle, getMasterGradient } from './templates';
+import classSvg from '../../assets/classSvg.js';
+import tierSvg from '../../assets/tierSvg.js';
+import { fetchImage } from '../fetch/index.js';
+import { UserInformation } from '../types/index.js';
+import { sanitizeString } from '../utils/sanitizer.js';
+import { getTierRank, getTierString } from './converters.js';
+import { getGlobalStyle, getMasterGradient } from './templates.js';
 
 interface CardBuilderProps {
   width?: number;

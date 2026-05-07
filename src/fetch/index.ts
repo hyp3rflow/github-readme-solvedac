@@ -1,5 +1,5 @@
 import { gotScraping } from 'got-scraping';
-import { UserInformation } from '../types';
+import { UserInformation } from '../types/index.js';
 
 export const fetchUserInformation = async (
   handle: string | string[]
